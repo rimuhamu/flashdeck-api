@@ -25,7 +25,9 @@ export const cards = pgTable('cards', {
   deckId: uuid('deck_id')
     .notNull()
     .references(() => decks.id, { onDelete: 'cascade' }),
-  content: text('content').notNull(),
+  front: text('front').notNull(),
+  back: text('back').notNull(),
+  hint: text('hint'),
   createdAt: timestamp('created_at').defaultNow(),
   updatedAt: timestamp('updated_at').defaultNow().notNull(),
 });
