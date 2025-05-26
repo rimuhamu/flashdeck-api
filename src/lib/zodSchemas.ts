@@ -10,3 +10,8 @@ export const cardSchema = z.object({
   back: z.string().min(1),
   hint: z.string().optional(),
 });
+
+export const registerSchema = z.object({
+  email: z.string().email(),
+  password: z.string().min(6),
+});
