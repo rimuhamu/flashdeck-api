@@ -1,9 +1,9 @@
 import { zValidator } from '@hono/zod-validator';
 import { Hono } from 'hono';
-import { registerSchema } from '../lib/zodSchemas';
+import { registerSchema } from '../libs/zodSchemas';
 import { hash, genSalt } from 'bcrypt';
 import { db } from '../db';
-import { successResponse, errorResponse } from '../util/response';
+import { successResponse, errorResponse } from '../utils/response';
 import { users } from '../db/schema';
 
 const app = new Hono();
